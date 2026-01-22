@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        h1 {
+            margin-top: 30px;
+            font-size: 38px;
+            color: #2c3e50;
+        }
+
+        p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+        }
+
+        hr {
+            width: 70%;
+            margin: 25px auto;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+        }
+
+        
+        
+        /* List Section Styling */
+        .details-container {
+            text-align: left;
+            max-width: 70%;
+            margin: 40px auto;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+
+        /* Rating Section Styling */
+        .rating-section {
+            background: #fff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .rating-section select, .rating-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        
+            
+        
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+<h1>Mini Product Catalog</h1>
+<p>Browse our latest products and great deals!</p>
+
+<hr>
+
+<h2>Featured Products</h2>
+
+<div class="products">
+    <div class="product-card">
+        <img src="https://zebronics.com/cdn/shop/products/zeb-iconic-lite-pic3.jpg?v=1672482509&width=1200" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+    </div>
+
+    <div class="product-card">
+        <img src="https://media.istockphoto.com/id/1372906882/photo/modern-blue-wireless-headphones-isolated-on-white-background-with-clipping-path.jpg?s=612x612&w=0&k=20&c=0k-2JFElEQ0QTvXsgtLx3i2JotQo_Eb8aEwyN-BOZjA=" alt="Headphones">
+        <h3>Wireless Headphones</h3>
+    </div>
+
+    <div class="product-card">
+        <img src="https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/66571582f67f8700240191b1/white-sneakers-men-5465.jpg" alt="Sneakers">
+        <h3>Sneakers</h3>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th>Buy Now</th>
+    </tr>
+    <tr>
+        <td>Smartwatch</td>
+        <td>$99</td>
+        <td>In Stock</td>
+        <td><button class="buy-btn">Buy Now</button></td>
+    </tr>
+    <tr>
+        <td>Wireless Headphones</td>
+        <td>$59</td>
+        <td>Out of Stock</td>
+        <td><button class="buy-btn" disabled>Buy Now</button></td>
+    </tr>
+    <tr>
+        <td>Sneakers</td>
+        <td>$75</td>
+        <td>In Stock</td>
+        <td><button class="buy-btn">Buy Now</button></td>
+    </tr>
+</table>
+
+<hr>
+
+<div class="details-container">
+    <h3>Why Shop With Us?</h3>
+    <ul>
+        <li>Free shipping on orders over $100.</li>
+        <li>24/7 dedicated customer support.</li>
+        <li>Easy 30-day return policy.</li>
+    </ul>
+
+    <h3>How to Order</h3>
+    <ol>
+        <li>Select your product.</li>
+        <li>Check availability in the table.</li>
+        <li>Click "Buy Now" to proceed.</li>
+    </ol>
+</div>
+
+<div class="rating-section">
+    <h3>Rate Your Experience</h3>
+    <p>How would you rate your visit today?</p>
+    <form>
+        <select id="rating" name="rating">
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select>
+        <textarea placeholder="Tell us more about your experience..." rows="3"></textarea>
+        <button style="background-color: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; transition: 0.3s;" 
+                type="button" 
+                onclick="alert('Thank you for your rating!')">
+            Submit Rating
+        </button>
+    </form>
+</div>
+
+<hr>
+
+<footer>
+    © 2026 Mini Product Catalog
+</footer>
+
+</body>
+</html>
