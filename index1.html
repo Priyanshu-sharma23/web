@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Product Catalog</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 38px;
+            color: #1a252f;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        hr {
+            width: 70%;
+            margin: 25px auto;
+            border: none;
+            height: 3px;
+            background: linear-gradient(to right, #2c3e50, #f1c40f, #2c3e50);
+        }
+
+        /* Product Section */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            border-bottom: 1px solid #f9f9f9;
+            padding-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin-top: 15px;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+
+        /* Table Styling */
+        table {
+            margin: 40px auto;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background: #2c3e50;
+            color: #f1c40f;
+            padding: 16px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #fcf8e3;
+        }
+
+        /* Buttons */
+        .buy-btn {
+            background: #2c3e50;
+            color: #f1c40f;
+            padding: 10px 20px;
+            border: 1px solid #f1c40f;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .buy-btn:hover:not(:disabled) {
+            background: #f1c40f;
+            color: #2c3e50;
+        }
+
+        .buy-btn:disabled {
+            background: #ccc;
+            border-color: #bbb;
+            color: #888;
+            cursor: not-allowed;
+        }
+
+        footer {
+            margin: 50px 0;
+            color: #999;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mini Product Catalog</h1>
+    <p>Browse our latest products and great deals!</p>
+
+    <hr>
+
+    <h2>Featured Products</h2>
+
+    <div class="products">
+        <div class="product-card">
+            <img src="https://zebronics.com/cdn/shop/products/zeb-iconic-lite-pic3.jpg?v=1672482509&width=1200" alt="Smartwatch">
+            <h3>Smartwatch</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://media.istockphoto.com/id/1372906882/photo/modern-blue-wireless-headphones-isolated-on-white-background-with-clipping-path.jpg?s=612x612&w=0&k=20&c=0k-2JFElEQ0QTvXsgtLx3i2JotQo_Eb8aEwyN-BOZjA=" alt="Headphones">
+            <h3>Wireless Headphones</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/66571582f67f8700240191b1/white-sneakers-men-5465.jpg" alt="Sneakers">
+            <h3>Sneakers</h3>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Availability</th>
+                <th>Buy Now</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Smartwatch</td>
+                <td>$99</td>
+                <td>In Stock</td>
+                <td><button class="buy-btn">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>Wireless Headphones</td>
+                <td>$59</td>
+                <td>Out of Stock</td>
+                <td><button class="buy-btn" disabled>Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>Sneakers</td>
+                <td>$75</td>
+                <td>In Stock</td>
+                <td><button class="buy-btn">Buy Now</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <footer>
+        © 2026 Mini Product Catalog
+    </footer>
+
+</body>
+</html>
