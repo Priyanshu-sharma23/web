@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Practical4/index.css">
+</head>
+
+<body>
+    <div class="outer-div">
+        <div class="inner-div">
+            <h2>Personalized Greeeting App</h2>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <br>
+            <br>
+            <button onclick="greetUser()">Greet Me</button>
+        </div>
+    </div>
+
+    <script>
+        function greetUser() {
+            var name = document.getElementById("name").value;
+            if (name === "") {
+                alert("Hello user welcome");
+            }
+            else {
+                alert("Hello " + name + " welcome.");
+            }
+        }
+    </script>
+</body>
+
+</html>
