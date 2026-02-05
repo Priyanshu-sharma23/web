@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Practical4/second.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="form-group">
+            <h1>Student Information</h1>
+        </div>
+        <div class="form-group">
+            <label for="name">Enter your name:</label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="age"> Enter your age:</label>
+            <br>
+            <input type="text" name="age" id="age" placeholder="Enter your age">
+        </div>
+
+        <div class="form-group">
+            <label for="course">Enter your course:</label>
+            <br>
+            <select name="course" id="course">
+                <option value="mca" id="mca">Masters in Computer Applications</option>
+                <option value="msc" id="msc">Masters in Science</option>
+                <option value="btech" id="btech">Btech</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="year"> Enter your year:</label>
+            <br>
+            <select name="year" id="year">
+                <option value="2026" id="six">2026</option>
+                <option value="2027" id="seven">2027</option>
+                <option value="2028" id="eight">2028</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" onclick="getInfo()">Submit</button>
+        </div>
+
+        <div class="output" id="output"></div>
+
+    </div>
+
+    <script>
+        function getInfo() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var course = document.getElementById("course").value;
+            var year = document.getElementById("year").value;
+            if (name === "" || age === "" || year === "" || course === "") {
+                alert("Please fill out all the details");
+            }
+            else {
+                var status;
+                if (age > 18) {
+                    status = "adult";
+                }
+                else status = minor;
+                alert("Hello" + name + ", Thankyou for sharing your info.");
+                document.getElementById("output").innerHTML =
+                    "<p>Name: " + name + "<br>Age: " + age + "<br>Course: " + course + "<br>Year: " + year + "<br>Status: " + status + "</p>";
+            }
+        }
+    </script>
+</body>
+
+</html>
