@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(75, 128, 175);
+}
+
+.form {
+    width: 35%;
+    background-color: aliceblue;
+    border-radius: 7px;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+input,
+button,
+select {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: rgb(75, 128, 175);
+    border: none;
+}
+
+.output {
+    margin: 15px;
+}
